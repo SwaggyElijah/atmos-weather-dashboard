@@ -1,7 +1,12 @@
 import { sampleStation, makeHistory } from "./sample-data.js";
 
 const config = {
-  mode: location.protocol === "file:" ? "sample" : "weather-underground-proxy",
+  // Static hosts cannot run the secret-bearing weather proxy. Keep the public
+  // GitHub Pages build useful without ever exposing the station API key.
+  mode:
+    location.protocol === "file:" || location.hostname.endsWith(".github.io")
+      ? "sample"
+      : "weather-underground-proxy",
   proxyEndpoint: "./api/weather",
   refreshMs: 30_000,
 };
