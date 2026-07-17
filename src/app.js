@@ -1,4 +1,4 @@
-import { getStationSnapshot, getHistory, subscribeToStation } from "./data/station-client.js";
+import { getStationSnapshot, getHistory, subscribeToStation } from "./data/station-client.js?v=2";
 import { icon, weatherIcon } from "./components/icons.js";
 import { renderChart } from "./components/chart.js";
 
