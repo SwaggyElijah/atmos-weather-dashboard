@@ -1,0 +1,5 @@
+# Configure this as a Cloudflare Pages secret. Do not commit the real value.
+WEATHER_UNDERGROUND_API_KEY=your_key_here
+
+# Optional; the dashboard already defaults to the configured station ID.
+WEATHER_STATION_ID=your_station_id_here
